@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "SalesMember": {
+      "title": "Sales Member",
+      "description": "A sales member in the team",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "avatar": { "type": "string" },
+        "color": { "type": "string" }
+      },
+      "required": ["id", "name"]
+    },
+    "WorkLog": {
+      "title": "Work Log",
+      "description": "A daily work activity log",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "salesId": { "type": "string" },
+        "date": { "type": "string" },
+        "type": { "type": "string", "enum": ["work", "case", "call"] },
+        "startTime": { "type": "string" },
+        "endTime": { "type": "string" },
+        "details": { "type": "string" },
+        "callsCount": { "type": "number" },
+        "status": { "type": "string" }
+      },
+      "required": ["id", "salesId", "date", "type"]
+    }
+  },
+  "firestore": {
+    "sales/{salesId}": {
+      "schema": "SalesMember",
+      "description": "Collection of sales members"
+    },
+    "logs/{logId}": {
+      "schema": "WorkLog",
+      "description": "Collection of daily work logs"
+    }
+  }
+}

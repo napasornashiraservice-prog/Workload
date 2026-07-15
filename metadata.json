@@ -1,0 +1,6 @@
+{
+  "name": "สมุดบันทึกงานประจำวัน",
+  "description": "ระบบจดบันทึกการทำงานของเซลล์รายวัน ติดเคส และยอดโทรลูกค้า พร้อมสรุปผลสัปดาห์และแจ้งเตือนเดดไลน์",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
