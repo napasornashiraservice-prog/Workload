@@ -621,11 +621,9 @@ export default function App() {
           return !isNook;
         });
 
-        // Ensure the preloaded logs for Ph Phere and Fr Frame exist in the database with correct dates.
+        // Ensure all preloaded logs exist in the database with correct dates and details.
         // If not, write/update them in Firestore and merge/update them locally.
-        const specialPreloadedLogs = PRELOADED_LOGS.filter(
-          log => log.id.startsWith('log-ph-') || log.id.startsWith('log-fr-')
-        );
+        const specialPreloadedLogs = PRELOADED_LOGS;
 
         const logsToSeed: WorkLog[] = [];
         specialPreloadedLogs.forEach(pLog => {
